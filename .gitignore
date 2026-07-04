@@ -1,0 +1,20 @@
+# 临时文件
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 工作目录
+.workbuddy/
+
+# 临时脚本
+fetch_jxty.py
+gen_html.py
+gen_compare.py
+gen_compare2.py
+save_csv.py
+
+# 系统文件
+.DS_Store
+Thumbs.db
+hk_data_raw.json

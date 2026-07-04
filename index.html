@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>江西铜业 A股 vs 港股 交易数据分析</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);min-height:100vh;color:#fff;display:flex;align-items:center;justify-content:center}
+.container{max-width:900px;width:90%;margin:40px auto}
+.header{text-align:center;margin-bottom:40px}
+.header h1{font-size:36px;font-weight:700;margin-bottom:8px}
+.header p{font-size:16px;opacity:.7}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:32px}
+.card{background:rgba(255,255,255,0.08);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.15);border-radius:16px;padding:28px;transition:all .3s;cursor:pointer;text-decoration:none;color:#fff}
+.card:hover{background:rgba(255,255,255,0.12);transform:translateY(-4px);border-color:rgba(255,255,255,0.3)}
+.card .icon{font-size:32px;margin-bottom:12px}
+.card h2{font-size:20px;font-weight:600;margin-bottom:8px}
+.card p{font-size:14px;opacity:.7;line-height:1.6}
+.card .link{margin-top:16px;font-size:13px;color:#4da6ff;display:inline-block}
+.data-section{background:rgba(255,255,255,0.05);border-radius:12px;padding:24px;margin-bottom:24px}
+.data-section h3{font-size:16px;font-weight:600;margin-bottom:16px;opacity:.9}
+.data-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.data-item{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:rgba(255,255,255,0.05);border-radius:8px;font-size:13px}
+.data-item .name{opacity:.8}
+.data-item a{color:#4da6ff;text-decoration:none}
+.data-item a:hover{text-decoration:underline}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:32px}
+.stat{text-align:center;padding:16px;background:rgba(255,255,255,0.05);border-radius:12px}
+.stat .val{font-size:28px;font-weight:700;color:#ff6b6b}
+.stat .lbl{font-size:12px;opacity:.6;margin-top:4px}
+.footer{text-align:center;font-size:12px;opacity:.4;margin-top:40px}
+.up{color:#ff6b6b}.down{color:#52c41a}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>江西铜业 交易数据分析</h1>
+    <p>600362.SH (A股) vs 00358.HK (港股) · 近一年 · 数据来源 Tushare Pro</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="val up">+84.3%</div><div class="lbl">A股年内涨幅</div></div>
+    <div class="stat"><div class="val up">+99.7%</div><div class="lbl">港股年内涨幅</div></div>
+    <div class="stat"><div class="val">242</div><div class="lbl">A股交易日</div></div>
+    <div class="stat"><div class="val">235</div><div class="lbl">同期匹配天数</div></div>
+  </div>
+
+  <div class="cards">
+    <a class="card" href="outputs/jxty_dashboard.html">
+      <div class="icon">📈</div>
+      <h2>A股 K线图面板</h2>
+      <p>江西铜业 A股 (600362.SH) 近一年 K线图，含 MA5/MA10/MA20 均线、成交量、涨跌幅分布、月度统计</p>
+      <span class="link">查看面板 →</span>
+    </a>
+    <a class="card" href="outputs/jxty_compare.html">
+      <div class="icon">🔄</div>
+      <h2>AH 对比分析面板</h2>
+      <p>A股 vs 港股 双轴价格走势、AH溢价率、日涨跌幅对比、成交量对比、月度涨跌对比</p>
+      <span class="link">查看对比 →</span>
+    </a>
+  </div>
+
+  <div class="data-section">
+    <h3>数据文件下载 (CSV)</h3>
+    <div class="data-list">
+      <div class="data-item"><span class="name">A股日线数据</span><a href="outputs/jxty_600362_A.csv">jxty_600362_A.csv</a></div>
+      <div class="data-item"><span class="name">港股日线数据</span><a href="outputs/jxty_00358_HK.csv">jxty_00358_HK.csv</a></div>
+      <div class="data-item"><span class="name">AH对比数据</span><a href="outputs/jxty_AH_compare.csv">jxty_AH_compare.csv</a></div>
+      <div class="data-item"><span class="name">A股JSON数据</span><a href="outputs/jxty_data.json">jxty_data.json</a></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    本数据仅供参考，不构成投资建议 · 投资有风险，决策需谨慎<br>
+    数据范围: 2025-07-04 ~ 2026-07-03 · GitHub Pages
+  </div>
+</div>
+</body>
+</html>
